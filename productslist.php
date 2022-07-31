@@ -48,7 +48,7 @@
 
          <a href="./add_product.php" class="button btn navbar-btn text-light bg-dark">ADD</a>
 
-         <input type="submit" id="submit" name="delete-selected" value="MASS DELETE" class=" button btn navbar-btn text-light  bg-dark">
+         <input type="submit" id="delete-product-btn" name="delete-selected" value="MASS DELETE" class=" button btn navbar-btn text-light  bg-dark">
 
        </span>
 
