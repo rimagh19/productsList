@@ -47,17 +47,17 @@ $last_item = new Items();
   <div class="form-area">    
                           <div class="labels-devider">
                               <label class="label text-light">SKU</label>
-                              <input  type="text" value = <?=  $last_item-> getSKU(); ?>  disabled="disabled">
+                              <input  id = "sku" type="text" value = <?=  $last_item-> getSKU(); ?>  disabled="disabled">
                           </div>
                           <div class="main-inputs">
                             <!-- sku - name - price -->
                             <div class="labels-devider">
                               <label class="label text-light">Name</label>
-                              <input  type="text" name="name" required>
+                              <input  type="text" name="name" id="name" required>
                             </div>
                             <div class="labels-devider">
                               <label class="label text-light">price($)</label>
-                              <input type="number" name="price"  required>
+                              <input type="number" name="price" id ="price" required>
                             </div>
                             
                             <!-- typeswitcher -->
