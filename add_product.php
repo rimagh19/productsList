@@ -36,7 +36,7 @@ $last_item = new Items();
 
         <nav class="navbar navbar-header navbar-dark bg-dark" style="      font-family: Trebuchet MS, sans-serif; ">
           <a class="navbar-brand font-weight-bold h1" href="./productslist.php" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
-          <form method="POST" >
+          <form id="product-form" method="POST" >
             <input type="submit" value="Save" name="submit" class="button btn navbar-btn text-light  bg-dark">
             <span style="margin-top:0.5rem; margin-right:2rem;">
               <a href="./productslist.php" class="button btn navbar-btn text-light bg-dark">Cancel</a>
