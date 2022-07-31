@@ -66,14 +66,13 @@ class Items extends Dbh
           header("location: productslist.php");
         }
       } else {
-        header("location: productslist.php");
+        
+        $message = 'no products selected to delete, please select a product to delet first';
 
-        // $message = 'no products selected to delete, please select a product to delet first';
-
-        // echo "<SCRIPT> 
-        //     alert('$message')
-        //     window.location.replace('.php');
-        // </SCRIPT>";
+        echo "<SCRIPT> 
+            alert('$message')
+            window.location.replace('.php');
+        </SCRIPT>";
 
           }
 

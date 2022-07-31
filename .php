@@ -46,7 +46,7 @@
      <form id="delete-form" method="POST">
        <span style="margin-top:0.5rem; margin-right:2rem; display: inline-block;">
 
-         <a href="./add_product" value="ADD" class="button btn navbar-btn text-light bg-dark">ADD</a>
+         <a href="./addproduct" value="ADD" class="button btn navbar-btn text-light bg-dark">ADD</a>
 
          <input type="submit" id="delete-product-btn" name="delete-selected" value="MASS DELETE" class=" button btn navbar-btn text-light  bg-dark">
 
