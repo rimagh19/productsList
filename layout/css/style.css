@@ -8,18 +8,29 @@
     font-family: sans-serif;
     padding-top: 30px;  
 }
-.form-area {
+/* .form-area {
     height: 700px;
     position: absolute;
     top:0; 
     left:50%;
-    margin-left:-200px;
+    margin-left:-250px;
     margin-top:200px;
-    margin-bottom:500px;
+    margin-bottom:200px;
     padding: 40px;
     width: 400px;
-} 
+}  */
 
+.form-area {
+    width:20%;
+    position: absolute;
+    left:50%;
+    margin-left:-10%;
+    margin-top:100px;
+    margin-bottom:200px;
+    max-width:390px;
+    min-width:300px;
+
+}
 
 
 .center{
@@ -58,16 +69,13 @@ div.labels-devider{
 }
 
 .description {
-    padding-right: 20px;
     font-size: 0.7rem;
     color: #f8f9fa;
     text-align: right;
 }
 
 input{
-    margin-right:0px;
-
-
+width: auto;
 }
 
 .body{

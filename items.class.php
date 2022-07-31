@@ -22,8 +22,8 @@ class Items extends Dbh
       $values = $_POST['value'];
       var_dump($values);
       $value = (int)$values[0] + (int)$values[1] + (int)$values[2];
-      $value_2 = $_POST['value_2'];
-      $value_3 = $_POST['value_3'];
+      $value_2 = (int)$values[3];
+      $value_3 = (int)$values[4];
       $name = strval($_POST['name']);
       $type = strval($_POST['type']);
       $price = $_POST['price'];
@@ -32,7 +32,6 @@ class Items extends Dbh
 
       $stmt->execute();
       header("Location: ./productslist.php", true, 301);
-      exit();
     }
   }
 

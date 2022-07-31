@@ -14,6 +14,7 @@ $last_item = new Items();
 
 <head>
   <title> products </title>
+  <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
   <link rel="stylesheet" type="text/css" href="layout\css\style.css" />
@@ -31,11 +32,11 @@ $last_item = new Items();
 
 
 
-<body class="body" >
+<body class="body" style=" font-family: Trebuchet MS, sans-serif;">
 
         <nav class="navbar navbar-header navbar-dark bg-dark" style="      font-family: Trebuchet MS, sans-serif; ">
           <a class="navbar-brand font-weight-bold h1" href="./productslist.php" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
-          <form method="POST">
+          <form method="POST" >
             <input type="submit" value="Save" name="submit" class="button btn navbar-btn text-light  bg-dark">
             <span style="margin-top:0.5rem; margin-right:2rem;">
               <a href="./productslist.php" class="button btn navbar-btn text-light bg-dark">Cancel</a>
@@ -56,14 +57,14 @@ $last_item = new Items();
                             </div>
                             <div class="labels-devider">
                               <label class="label text-light">price($)</label>
-                              <input type="number" name="price" required>
+                              <input type="number" name="price"  required>
                             </div>
                             
                             <!-- typeswitcher -->
                             <div class="labels-devider">
                               <label class="label text-light" style="width:130px;">Type Switcher</label>
                               <span class="selectpicker">
-                                <select name="type" id="productType" style="width:200px;" required>
+                                <select name="type" id="productType" style="width:auto;" required>
                                   <option selected value = "first-select" >Select Type:</option>
                                   <option value="DVD">DVD</option>
                                   <option value="Furniture">Furniture</option>
@@ -75,17 +76,17 @@ $last_item = new Items();
                            
                           
                           <!-- indivisual forms -->
-                            <div id="special-atts" style="margin-top:20px; ">
+                            <div id="special-atts" style="margin-top:20px; "  >
 
                               <div class="DVD-area special-atts" >
                                       <label class="  text-light">Size (MB)</label>
-                                      <input  type="number" name="value[]" id="size">
+                                      <input  type="number" id="size" name="value[]">
                                       <p class="description ">Please, provide size*</p>
                               </div>   
 
                               <div class="Book-area special-atts">
                                       <label class=" text-light">Weight (KG)</label>
-                                      <input type="number" name="value[]" id="weight">
+                                      <input type="number"  id="weight" name="value[]">
                                       <p class="description  ">Please, provide weight*</p>
                               </div>  
 
@@ -94,15 +95,15 @@ $last_item = new Items();
 
                               <div class="Furniture-area special-atts">
                                       <label class="   text-light">Height (CM)</label>
-                                      <input  type="number" name="value[]" id="height">
+                                      <input  type="number" id="height" name="value[]">
                                       <p class="description ">Please, provide height*</p>
 
                                       <label class=" text-light ">Width (CM)</label>
-                                      <input class="" type="number" id="width" name="value_2">
+                                      <input class="" type="number" id="width" name="value[]">
                                       <p class="description ">Please, provide width*</p>
 
                                       <label class=" text-light ">Length (CM)</label>
-                                      <input class="" type="number" id="length" name="value_3">
+                                      <input class="" type="number" id="length" name="value[]">
                                       <p class="description ">Please, provide length*</p>
                               </div>
 
@@ -125,8 +126,8 @@ $last_item = new Items();
       $(".Book-area").hide();
 
       window.onload = function (){
-        $(".main-inputs").find("input").each(function() {
-                              $(this).val("");
+        $(".form-area").find("input").each(function() {
+                              $(this).val('');
                           });
         $('#productType').val("first-select");                   
       }
@@ -138,15 +139,17 @@ $last_item = new Items();
         
 //--- if not selected area : set input to null && hide ---
         $('.special-atts').not(area).each(function() {
-                          $(this).find("input").each(function() {
-                              $(this).val(null);   //TODO fix (it shows 0) - if '' used >> doesnt submit 
-                          }); 
                           $(this).hide();
+                          $(this).find("input").each(function() {
+                              $(this).val(0);  
+                          }); 
+                          
         });
 
 //--- make input required ---
         $(area).find("input").each(function() {
           $(this).attr('required', true);
+          $(this).val('');  
         });        
 
       });
