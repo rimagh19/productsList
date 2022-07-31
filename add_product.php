@@ -35,11 +35,11 @@ $last_item = new Items();
 <body class="body" style=" font-family: Trebuchet MS, sans-serif;">
 
         <nav class="navbar navbar-header navbar-dark bg-dark" style="      font-family: Trebuchet MS, sans-serif; ">
-          <a class="navbar-brand font-weight-bold h1" href="./productslist.php" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
+          <a class="navbar-brand font-weight-bold h1" href="./.php" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
           <form id="product_form" method="POST" >
             <input type="submit" value="Save" name="Save" class="button btn navbar-btn text-light  bg-dark">
             <span style="margin-top:0.5rem; margin-right:2rem;">
-              <a href="./productslist.php" class="button btn navbar-btn text-light bg-dark">Cancel</a>
+              <a href="./.php" class="button btn navbar-btn text-light bg-dark">Cancel</a>
             </span>
         </nav>
 

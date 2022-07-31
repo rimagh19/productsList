@@ -31,7 +31,7 @@ class Items extends Dbh
       $stmt->bind_param('ssssss', $name, $price, $value, $value_2, $value_3, $type);
 
       $stmt->execute();
-      header("Location: ./productslist.php", true, 301);
+      header("Location: ./.php", true, 301);
     }
   }
 
@@ -71,7 +71,7 @@ class Items extends Dbh
 
         echo "<SCRIPT> 
             alert('$message')
-            window.location.replace('productslist.php');
+            window.location.replace('.php');
         </SCRIPT>";
 
           }
