@@ -10,7 +10,5 @@ Class Dbh{
         return $con;
     }
 
-
-
 }
 

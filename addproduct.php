@@ -15,14 +15,8 @@ $last_item = new Items();
 <head>
   <title> products </title>
   <link rel="icon" href="images/icon.png">
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-
   <link rel="stylesheet" type="text/css" href="layout\css\style.css" />
   <link rel="stylesheet" type="text/css" href="layout\css\bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="layout\css\fontawesome.min.css" />
-
-
-
 
   <meta charset="UTF-8">
 
@@ -35,11 +29,11 @@ $last_item = new Items();
 <body class="body" style=" font-family: Trebuchet MS, sans-serif;">
 
         <nav class="navbar navbar-header navbar-dark bg-dark" style="      font-family: Trebuchet MS, sans-serif; ">
-          <a class="navbar-brand font-weight-bold h1" href="./" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
+          <a class="navbar-brand font-weight-bold h1" href="./index" style="margin-left: 2rem; margin-top:1rem;">PRODUCTS LIST</a>
           <form id="product_form" method="POST" >
-            <input type="submit" value="Save" name="Save" class="button btn navbar-btn text-light  bg-dark">
+            <input type="submit" value="Save" name="submit" class="button btn navbar-btn text-light  bg-dark">
             <span style="margin-top:0.5rem; margin-right:2rem;">
-              <a href="./ "class="button btn navbar-btn text-light bg-dark">Cancel</a>
+              <a href="./index "class="button btn navbar-btn text-light bg-dark">Cancel</a>
             </span>
         </nav>
 
@@ -65,7 +59,7 @@ $last_item = new Items();
                               <label class="label text-light" style="width:130px;">Type Switcher</label>
                               <span class="selectpicker">
                                 <select name="type" id="productType" style="width:auto;" required>
-                                  <option selected value = "first-select" >Select Type:</option>
+                                  <option selected value = "" >Select Type:</option>
                                   <option value="DVD">DVD</option>
                                   <option value="Furniture">Furniture</option>
                                   <option value="Book">Book</option>
@@ -129,7 +123,7 @@ $last_item = new Items();
         $(".form-area").find("input").each(function() {
                               $(this).val('');
                           });
-        $('#productType').val("first-select");                   
+        $('#productType').val("");                   
       }
       $('#productType').change(function() {
         var area = $('#productType').find('option:selected').val();

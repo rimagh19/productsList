@@ -8,8 +8,7 @@
   $count_item = new Items();
   $count = $count_item->count();  
   
-
- ?>
+   ?>
 
 
 
@@ -19,15 +18,9 @@
 
  <head>
    <title> products </title>
+   <link rel="icon" href="images/icon.png">
    <link rel="stylesheet" type="text/css" href="layout\css\style.css" />
-
    <link rel="stylesheet" type="text/css" href="layout\css\bootstrap.css" />
-
-
-   <link rel="stylesheet" type="text/css" href="layout\css\fontawesome.min.css" />
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script src="layout\js\jquery.min.js" type="text/javascript"></script>
-   <script src="layout\js\bootstrap.min.js" type="text/javascript"></script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE-edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,11 +56,10 @@
       $items = $itemsObject->getItems();
       foreach ($items as $item) {
       ?>
-
        <div class="card shadow text-white bg-dark">
          <div class="card-header" style="text-align: left;">
            <div class="form-check">
-             <input name="delete-checkbox[]" class="form-check-input" type="checkbox" value="<?= $item['sku']; ?>" id="flexCheckDefault" style="transform : scale(2);">
+             <input name="delete-checkbox[]" class="delete-checkbox" type="checkbox" value="<?= $item['sku']; ?>" id="flexCheckDefault" style="transform : scale(2);">
              <label class="form-check-label" for="flexCheckDefault">
              </label>
            </div>
@@ -98,30 +90,22 @@
        </div>
      <?php } ?>
 
-
    </div>
-
-
    </form>
+
+
    <h3 id="emptyDB" class="text-light">No Products Added Yet</h3>
 
    <br><br><br><br><br><br><p class="foot text-center py-3 bg-dark shadow">Scandiweb Test Assignment - done by rima- </p>
 
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-
    <script type="text/javascript">
-
-
      var count = <?php echo $count; ?>;
      if (count == 0) {
        $("#emptyDB").show();
      } else {
        $("#emptyDB").hide();
      }
-
-  
-
-
    </script>
 
  </body>

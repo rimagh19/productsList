@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule ^(|addproduct)$ $1.php [NC,L]
+RewriteRule ^(index|addproduct)$ $1.php [NC,L]

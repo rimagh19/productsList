@@ -7,13 +7,16 @@ class Items extends Dbh
       $stmt = $this->connect()->query($sql);
       return mysqli_num_rows ( $stmt );
     }
+
+
   public function getItems()
   {
-    //fetch items
     $sql = "SELECT * FROM items";
     $stmt = $this->connect()->query($sql);
     return $stmt;
   }
+
+  
   public function insertItem()
   {
     $con = $this->connect();
@@ -31,7 +34,7 @@ class Items extends Dbh
       $stmt->bind_param('ssssss', $name, $price, $value, $value_2, $value_3, $type);
 
       $stmt->execute();
-      header("Location: ./.php", true, 301);
+      header("location: ./index");
     }
   }
 
@@ -63,7 +66,7 @@ class Items extends Dbh
         $query_run =  mysqli_query($con, $query);
 
         if ($query_run) {
-          header("location: productslist.php");
+          header("location: ./index");
         }
       } else {
         
@@ -71,16 +74,12 @@ class Items extends Dbh
 
         echo "<SCRIPT> 
             alert('$message')
-            window.location.replace('.php');
+            window.location.replace('index');
         </SCRIPT>";
 
           }
 
     }
   }
-
-
-  
-  
 
 }
